@@ -1,0 +1,28 @@
+[project]
+name = "flet-iap"
+version = "0.1.0"
+description = "Flet IAP for Flet"
+readme = "README.md"
+authors = [{ name = "DaikyXendo", email = "hizamaakechi19901205@gmail.com" }]
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+requires-python = ">=3.8"
+dependencies = ["flet>=0.25.2"]
+
+[project.urls]
+Homepage = "https://flet.dev"
+# Documentation = "https://flet.dev/docs/controls/webview/"
+# Repository = "https://github.com/flet-dev/flet-webview"
+# Issues = "https://github.com/flet-dev/flet-webview/issues"
+
+[tool.setuptools.package-data]
+"flutter.flet_iap" = ["**/*"]
+
+[tool.uv]
+dev-dependencies = ["flet[all]>=0.25.2"]
+
+[tool.setuptools]
+license-files = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
