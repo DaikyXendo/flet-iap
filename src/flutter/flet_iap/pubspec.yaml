@@ -1,7 +1,7 @@
 name: flet_webview
 description: Flet WebView control
 homepage: https://flet.dev
-repository: https://github.com/flet-dev/flet-web-view/src/flutter/flet_webview
+repository: https://github.com/DaikyXendo/flet-iap
 version: 0.1.0
 
 environment:
@@ -13,11 +13,9 @@ dependencies:
     sdk: flutter
 
   collection: ^1.16.0
-  webview_flutter: ^4.10.0
-  flutter_web_plugins:
-    sdk: flutter
-  webview_flutter_web: ^0.2.3+2
-  webview_flutter_platform_interface: ^2.4.0
+  in_app_purchase: ^3.2.1
+  in_app_purchase_android: ^0.4.0
+  in_app_purchase_storekit: ^0.3.21
 
   flet: ^0.25.2
 

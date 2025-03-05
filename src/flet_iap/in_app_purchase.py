@@ -120,7 +120,7 @@ class InAppPurchase(Control):
         #
         # Control
         #
-        ref: Optional[Ref] = None,
+        ref: Optional[Ref] = None,  # pyright: ignore
         visible: Optional[bool] = None,
         disabled: Optional[bool] = None,
         data: Any = None,
@@ -176,23 +176,6 @@ class InAppPurchase(Control):
         """Restore previous purchases"""
         self._check_mobile_platform()
         self.invoke_method("restore_purchases")
-
-    def get_past_purchases(
-        self, wait_timeout: OptionalNumber = 10
-    ) -> list[dict[str, Any]]:
-        """Get past purchases synchronously"""
-        self._check_mobile_platform()
-        result = self.invoke_method(
-            "get_past_purchases", wait_for_result=True, wait_timeout=wait_timeout
-        )
-        return json.loads(result) if result else []
-
-    def finish_transaction(self, transaction_id: str):
-        """Complete a transaction (required on iOS)"""
-        self._check_mobile_platform()
-        self.invoke_method(
-            "finish_transaction", arguments={"transactionId": transaction_id}
-        )
 
     # product_ids
     @property
